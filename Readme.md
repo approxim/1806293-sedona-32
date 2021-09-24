@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Дмитрий Сергеевич Галушко](https://up.htmlacademy.ru/htmlcss/32/user/1806293).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Устинов](https://htmlacademy.ru/profile/ustinov-dmitriy)
 
 ---
 
