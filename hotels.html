@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиницы Седоны</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="page-header">
+        <!-- Навигация -->
+        <nav class="navigation">
+            <!-- Меню -->
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">Главная</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="about.html">О Седоне</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="hotels.html">Гостиницы</a>
+                </li>
+            </ul>
+
+            <!-- Лого -->
+            <img class="sedona-logo" src="assets/img/sedona_logo.svg" alt="Логотип сайта">
+
+            <!-- Вспомогательные элементы -->
+            <ul class="navigation-list navigation-user">
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">
+                        <span class="visually-hidden">Поиск</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="about.html">
+                        <span class="visually-hidden">Лайки</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link brown-button" href="hotels.html">
+                        <span class="">Хочу сюда!</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Фильтр -->
+    <section class="filter">
+        <h2>Гостиницы Седоны</h2>
+
+        <!-- Хлебные крошки -->
+        <ul class="breadcrumb">
+            <li><a class="breadcrumb-home" href="index.html">#</a></li>
+            <li><a class="breadcrumb-hotels" href="#">Гостиницы</a></li>
+        </ul>
+
+        <!-- Форма для фильтра гостиниц -->
+        <form class="filter-form" action="" name="filter-form" method="post">
+            <ul class="filter-wrapper">
+                <li class="filter-item">
+                    <p>Инфраструктура:</p>
+                    <label>
+                        <input class="pool" type="checkbox" name="swimming_pool" checked> Бассейн
+                    </label>
+                    <label>
+                        <input class="parking" type="checkbox" name="parking" checked> Парковка
+                    </label>
+                    <label>
+                        <input class="wifi" type="checkbox" name="wifi"> Wi-fi
+                    </label>
+                </li>
+
+                <li class="filter-item">
+                    <p>Тип жилья:</p>
+                    <label>
+                        <input class="hotel" type="radio" name="type-of-house" checked> Гостиница
+                    </label>
+                    <label>
+                        <input class="motel" type="radio" name="type-of-house"> Мотель
+                    </label>
+                    <label>
+                        <input class="apartments" type="radio" name="type-of-house"> Апартаменты
+                    </label>
+                </li>
+
+                <li class="filter-item">
+                    <p>Стоимость, ₽:</p>
+                    <label><input class="" type="text" name="price" value="0">от</label>                    
+                    <label><input class="" type="text" name="price" value="9000">до</label>
+
+                    <input type="range" min="0" max="9000" step="500" value="7000"> 
+
+                </li>
+
+
+
+
+            </ul>
+        </form>
+
+        </div>
+    </section> <!-- Фильтр -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <!-- Иконки социальных сетей -->
+        <div class="footer-social">
+            <a class="footer-social__twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Twitter">Twitter</a>
+            <a class="footer-social__facebook" href="https://www.facebook.com/htmlacademy" target="_blank" title="Facebook">Facebook</a>
+            <a class="footer-social__youtube" href="https://www.youtube.com/c/HTMLAcademyRUS" target="_blank" title="Youtube">Youtube</a>
+        </div>
+
+        <!-- Номер телефона -->
+        <p class="footer-phone">+7 (812) 812-12-12</p>
+
+        <!-- Лого HTML-academy -->
+        <a class="footer-logo" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
+    </footer> <!-- Подвал сайта -->
+
+</body>
+</html>
