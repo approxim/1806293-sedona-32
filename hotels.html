@@ -14,7 +14,7 @@
             <!-- Меню -->
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link" href="#">Главная</a>
+                    <a class="navigation-link" href="index.html">Главная</a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="about.html">О Седоне</a>
@@ -50,21 +50,22 @@
         </nav>
     </header> <!-- /Шапка сайта -->
 
+    <h1 class="visually-hidden">Поиск гостиницы</h1> <!-- Скрытый заголовок -->
+
     <!-- Фильтр -->
     <section class="filter">
-        <h1 class="visually-hidden">Поиск гостиницы по параметрам</h1>
-
+        <h2 class="visually-hidden">Параметры поиска</h2> <!-- Скрытый заголовок -->
         <p class="filter-title">Гостиницы Седоны</p>
 
         <!-- Хлебные крошки -->
         <ul class="filter-breadcrumb">
             <li><a class="filter-breadcrumb__home" href="index.html">#</a></li>
-            <li><a class="filter-breadcrumb__hotels" href="#">Гостиницы</a></li>
+            <li><a class="filter-breadcrumb__hotels">Гостиницы</a></li>
         </ul>
 
         <!-- Форма для фильтра гостиниц -->
-        <form class="filter-form" action="" name="filter-form" method="post">
-            <h3 class="visually-hidden">Выбор параметров</h3>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" name="filter-form" method="post">
+            <h3 class="visually-hidden">Выбор параметров</h3> <!-- Скрытый заголовок -->
 
             <!-- Инфраструктура -->
             <fieldset class="filter-form__item">
@@ -103,12 +104,17 @@
                 <label>
                     <input type="text" name="price" value="9000"> до
                 </label>
-                <input type="range" min="0" max="9000" step="500" value="7000">
+                <button class="range-toggle toggle-min" type="button">
+                    <span>Изменить минимальную цену</span>
+                </button>
+                <button class="range-toggle toggle-max" type="button">
+                    <span>Изменить максимальную цену</span>
+                </button>
             </fieldset>
 
             <!-- Кнопки -->
             <fieldset class="filter-form__item">
-                <input class="filter-form__submit" type="submit" name="submit" value="Применить">
+                <input class="filter-form__submit blue-button" type="submit" name="submit" value="Применить">
                 <input class="filter-form__reset" type="reset" name="reset" value="Сбросить">
             </fieldset>
         </form> <!-- /filter-form -->
@@ -117,11 +123,10 @@
 
     <!-- Результаты поиска -->
     <section class="result">
+        <h2 class="visually-hidden">Результаты поиска</h2> <!-- Скрытый заголовок -->
 
-        <h1 class="visually-hidden">Результаты поиска</h1>
-        
         <!-- Сортировка результата поиска -->
-        <div class="sorter">
+        <form class="sorter" method="POST" action="https://echo.htmlacademy.ru/" name="sorter">
             <p class="sorter-found">Найдено гостиниц: <span>38</span></p>
 
             <!-- Метод сортировки -->
@@ -134,25 +139,25 @@
 
             <!-- Метод отображения -->
             <div class="sorter-buttons">
-                <button class="sorter__mode-time" type="button" name="mode-time" value=""></button>
-                <button class="sorter__mode-slideshow" type="button" name="mode-slideshow" value=""></button>
-                <button class="sorter__mode-list" type="button" name="mode-list" value=""></button>
+                <a class="sorter__mode-time" href="#"></a>
+                <a class="sorter__mode-slideshow" href="#"></a>
+                <a class="sorter__mode-list" href="#"></a>
             </div>
-        </div> <!-- /Сортировка результата поиска -->
+        </form> <!-- /Сортировка результата поиска -->
 
         <!-- Список отелей -->
         <ol class="hotels-list">
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="" alt="">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Amara Resort & Spa</p><br>
                     <p class="hotels-card__type">Гостиница</p>
                     <p class="hotels-card__cost">От 4000 ₽</p>
-                    <a class="hotels-card__moreinfo" href="">Подробнее</a>
-                    <button class="hotels-card__favorite" type="submit">В избранное</button>
+                    <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
+                    <button class="hotels-card__favorite blue-button" type="submit">В избранное</button>
                 </div>
                 <!-- Рейтинг -->
                 <div class="hotels-card__rating">
@@ -171,14 +176,14 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="" alt="">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Desert Quail Inn</p><br>
                     <p class="hotels-card__type">Мотель</p>
                     <p class="hotels-card__cost">От 3000 ₽</p>
-                    <a class="hotels-card__moreinfo" href="">Подробнее</a>
-                    <button class="hotels-card__favorite" type="submit">В избранное</button>
+                    <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
+                    <button class="hotels-card__favorite blue-button" type="submit">В избранное</button>
                 </div>
                 <!-- Рейтинг -->
                 <div class="hotels-card__rating">
@@ -197,14 +202,14 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="" alt="">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Villas at Poco Diablo</p><br>
                     <p class="hotels-card__type">Апартаменты</p>
                     <p class="hotels-card__cost">От 2000 ₽</p>
-                    <a class="hotels-card__moreinfo" href="">Подробнее</a>
-                    <button class="hotels-card__favorite in-favorite" type="submit">В избранном</button>
+                    <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
+                    <button class="hotels-card__favorite green-button" type="submit">В избранном</button>
                 </div>
                 <!-- Рейтинг -->
                 <div class="hotels-card__rating">
@@ -223,14 +228,14 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="" alt="">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">GreenTree Inn</p><br>
                     <p class="hotels-card__type">Гостиница</p>
                     <p class="hotels-card__cost">От 3000 ₽</p>
-                    <a class="hotels-card__moreinfo" href="">Подробнее</a>
-                    <button class="hotels-card__favorite" type="submit">В избранное</button>
+                    <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
+                    <button class="hotels-card__favorite blue-button" type="submit">В избранное</button>
                 </div>
                 <!-- Рейтинг -->
                 <div class="hotels-card__rating">
@@ -244,32 +249,32 @@
                     </div>
                     <p class="hotels-card__rating-desc">Рейтинг: <span>9,2</span></p>
                 </div>
-            </li> <!-- /Карточка отеля -->            
+            </li> <!-- /Карточка отеля -->
         </ol> <!-- /Список отелей -->
-    
+
         <!-- Кнопка "Загрузить еще" -->
-        <button type="button" name="load-more">Загрузить еще</button>
-        
+        <button class="load-more blue-button" type="button" name="load-more">Загрузить еще</button>
+
         <!-- Список страниц -->
         <div class="pager">
             <ol class="pager-list">
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">1</a>
+                    <a class="pager-list-item__link pager-current blue-button" href="">1</a>
                 </li>
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">2</a>
+                    <a class="pager-list-item__link blue-button" href="">2</a>
                 </li>
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">3</a>
+                    <a class="pager-list-item__link blue-button" href="">3</a>
                 </li>
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">4</a>
+                    <a class="pager-list-item__link blue-button" href="">4</a>
                 </li>
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">...</a>
+                    <a class="pager-list-item__link blue-button" href="">...</a>
                 </li>
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link" href="">10</a>
+                    <a class="pager-list-item__link blue-button" href="">10</a>
                 </li>
             </ol>
 
@@ -289,20 +294,23 @@
 
     <!-- Подписка на рассылку -->
     <article class="subscribe">
-        <h2 class="visually-hidden">Подпишитесь на расссылку</h2>
+        <h2 class="visually-hidden">Подпишитесь на расссылку</h2> <!-- Скрытый заголовок -->
         <p class="subscribe-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
-        <form class="subscribe-form" action="" name="subscribe-form" method="POST">
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" name="subscribe-form" method="POST">
             <input class="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
-            <input class="subscribe-button" type="submit" name="subscribe-button" value="Подписаться"> 
+            <input class="subscribe-button blue-button" type="submit" name="subscribe-button" value="Подписаться"> 
         </form>
     </article> <!-- /Подписка на рассылку -->
 
 
     <!-- Подвал сайта -->
     <footer class="footer">
+        <h2 class="visually-hidden">Наши контакты</h2> <!-- Скрытый заголовок -->
+
         <!-- Иконки социальных сетей -->
         <div class="footer-social">
+            <h3 class="visually-hidden">Мы в социальных сетях</h3> <!-- Скрытый заголовок -->
             <a class="footer-social__twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Twitter">
                 <p class="visually-hidden">Мы в Twitter</p>
                 Twitter
@@ -319,16 +327,17 @@
 
         <!-- Номер телефона -->
         <address>
-            <p class="footer-phone">+7 (812) 812-12-12</p>
+            <span class="visually-hidden">Наш телефон</span> <!-- Скрытый заголовок -->
+            <a class="footer-phone" href="https://api.whatsapp.com/send?phone=78128121212">+7 (812) 812-12-12</a>
         </address>  
-        
 
         <!-- Лого HTML-academy -->
         <a class="footer-logo" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">
+            <h3 class="visually-hidden">Ссылка на наш сайт</h3> <!-- Скрытый заголовок -->
             <p class="visually-hidden">Сайт HTML-академии</p>
             HTML Academy
         </a>
-    </footer> <!-- Подвал сайта -->
+    </footer> <!-- /Подвал сайта -->
 
 </body>
 </html>
