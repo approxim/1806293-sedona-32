@@ -20,34 +20,35 @@
                     <a class="navigation-link" href="about.html">О Седоне</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="hotels.html">Гостиницы</a>
-                </li>
-            </ul>
-
-            <!-- Лого -->
-            <a class="main-header-logo">
-                <img class="sedona-logo" src="assets/img/sedona_logo.svg" alt="Логотип сайта">
-            </a>
-
-            <!-- Вспомогательные элементы -->
-            <ul class="navigation-list navigation-user">
-                <li class="navigation-item">
-                    <a class="navigation-link" href="#">
-                        <span class="visually-hidden">Поиск</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link" href="about.html">
-                        <span class="visually-hidden">Лайки</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link brown-button" href="hotels.html">
-                        <span class="">Хочу сюда!</span>
-                    </a>
+                    <a class="navigation-link">Гостиницы</a>
                 </li>
             </ul>
         </nav>
+
+        <!-- Лого -->
+        <a class="header-logo">
+            <img class="sedona-logo" src="assets/img/logo/logo_sedona.svg" alt="Логотип сайта">
+        </a>
+
+        <!-- Вспомогательные элементы -->
+        <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+                <a class="navigation-link" href="#">
+                    <span class="visually-hidden">Поиск</span>
+                </a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link" href="about.html">
+                    <span class="visually-hidden">Лайки</span>
+                </a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link brown-button" href="hotels.html">
+                    <span class="">Хочу сюда!</span>
+                </a>
+            </li>
+        </ul>
+
     </header> <!-- /Шапка сайта -->
 
     <h1 class="visually-hidden">Поиск гостиницы</h1> <!-- Скрытый заголовок -->
@@ -126,7 +127,7 @@
         <h2 class="visually-hidden">Результаты поиска</h2> <!-- Скрытый заголовок -->
 
         <!-- Сортировка результата поиска -->
-        <form class="sorter" method="POST" action="https://echo.htmlacademy.ru/" name="sorter">
+        <div class="sorter">
             <p class="sorter-found">Найдено гостиниц: <span>38</span></p>
 
             <!-- Метод сортировки -->
@@ -138,19 +139,19 @@
             </select>
 
             <!-- Метод отображения -->
-            <div class="sorter-buttons">
-                <a class="sorter__mode-time" href="#"></a>
-                <a class="sorter__mode-slideshow" href="#"></a>
-                <a class="sorter__mode-list" href="#"></a>
-            </div>
-        </form> <!-- /Сортировка результата поиска -->
+            <ul class="sorter-buttons">
+                <li><button class="sorter__mode-time"></button></li>
+                <li><button class="sorter__mode-slideshow"></button></li>
+                <li><button class="sorter__mode-list"></button></li>
+            </ul>
+        </div> <!-- /Сортировка результата поиска -->
 
         <!-- Список отелей -->
         <ol class="hotels-list">
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" width="180" height="120" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="assets/img/content/hotel_1.jpg" alt="фото гостиницы">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Amara Resort & Spa</p><br>
@@ -176,7 +177,7 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" width="180" height="120" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="assets/img/content/hotel_2.jpg" alt="фото гостиницы">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Desert Quail Inn</p><br>
@@ -202,7 +203,7 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" width="180" height="120" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="assets/img/content/hotel_3.jpg" alt="фото гостиницы">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">Villas at Poco Diablo</p><br>
@@ -228,7 +229,7 @@
             <!-- Карточка отеля -->
             <li class="hotels-card">
                 <!-- Картинка -->
-                <img class="hotels-card__image" width="180" height="120" src="" alt="">
+                <img class="hotels-card__image" width="180" height="120" src="assets/img/content/hotel_4.jpg" alt="фото гостиницы">
                 <!-- Описание -->
                 <div class="hotels-card__info">
                     <p class="hotels-card__name">GreenTree Inn</p><br>
@@ -257,7 +258,7 @@
 
         <!-- Список страниц -->
         <div class="pager">
-            <ol class="pager-list">
+            <ul class="pager-list">
                 <li class="pager-list-item">
                     <a class="pager-list-item__link pager-current blue-button" href="">1</a>
                 </li>
@@ -276,7 +277,7 @@
                 <li class="pager-list-item">
                     <a class="pager-list-item__link blue-button" href="">10</a>
                 </li>
-            </ol>
+            </ul>
 
             <div class="pager-select">
                 <p>Гостиниц на странице: </p>
@@ -292,16 +293,18 @@
     </section> <!-- /Результаты поиска -->
 
 
-    <!-- Подписка на рассылку -->
-    <article class="subscribe">
-        <h2 class="visually-hidden">Подпишитесь на расссылку</h2> <!-- Скрытый заголовок -->
-        <p class="subscribe-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <!-- Секция Подписка на рассылку -->
+    <section class="subscribe">
+        <h2 class="visually-hidden">Оформление подписки на рассылку</h2> <!-- Скрытый заголовок -->
+        <p class="section-title">Подпишитесь на рассылку</p>
+        <p class="section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" name="subscribe-form" method="POST">
-            <input class="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
-            <input class="subscribe-button blue-button" type="submit" name="subscribe-button" value="Подписаться"> 
+        <!-- Форма подписки -->
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" name="subscribe-form" method="post">
+            <input class="subscribe-form__email" type="email" name="user-email" placeholder="Ваш e-mail">
+            <input class="subscribe-form__submit blue-button" type="submit" name="submit" value="Подписаться">
         </form>
-    </article> <!-- /Подписка на рассылку -->
+    </section> <!-- /Подписка на рассылку -->
 
 
     <!-- Подвал сайта -->
@@ -312,16 +315,16 @@
         <div class="footer-social">
             <h3 class="visually-hidden">Мы в социальных сетях</h3> <!-- Скрытый заголовок -->
             <a class="footer-social__twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Twitter">
-                <p class="visually-hidden">Мы в Twitter</p>
-                Twitter
+                <img src="assets/img/logo/logo_twitter.svg" alt="лого Twitter">
+                <p class="visually-hidden">Мы в Twitter</p> <!-- Скрытый текст -->
             </a>
             <a class="footer-social__facebook" href="https://www.facebook.com/htmlacademy" target="_blank" title="Facebook">
-                <p class="visually-hidden">Мы в Facebook</p>
-                Facebook
+                <img src="assets/img/logo/logo_facebook.svg" alt="лого Facebook">
+                <p class="visually-hidden">Мы в Facebook</p> <!-- Скрытый текст -->
             </a>
             <a class="footer-social__youtube" href="https://www.youtube.com/c/HTMLAcademyRUS" target="_blank" title="Youtube">
-                <p class="visually-hidden">Мы в Youtube</p>
-                Youtube
+                <img src="assets/img/logo/logo_youtube.svg" alt="лого Youtube">
+                <p class="visually-hidden">Мы в Youtube</p> <!-- Скрытый текст -->
             </a>
         </div>
 
@@ -329,13 +332,13 @@
         <address>
             <span class="visually-hidden">Наш телефон</span> <!-- Скрытый заголовок -->
             <a class="footer-phone" href="https://api.whatsapp.com/send?phone=78128121212">+7 (812) 812-12-12</a>
-        </address>  
+        </address>
 
         <!-- Лого HTML-academy -->
         <a class="footer-logo" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">
             <h3 class="visually-hidden">Ссылка на наш сайт</h3> <!-- Скрытый заголовок -->
             <p class="visually-hidden">Сайт HTML-академии</p>
-            HTML Academy
+            <img src="assets/img/logo/logo_htmlacademy.svg" alt="лого HTMLacademy">
         </a>
     </footer> <!-- /Подвал сайта -->
 
