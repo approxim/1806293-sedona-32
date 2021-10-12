@@ -60,8 +60,14 @@
 
         <!-- Хлебные крошки -->
         <ul class="filter-breadcrumb">
-            <li><a class="filter-breadcrumb__home" href="index.html">#</a></li>
-            <li><a class="filter-breadcrumb__hotels">Гостиницы</a></li>
+            <li class="filter-breadcrumb__item">
+                <a class="filter-breadcrumb__home" href="index.html">
+                    <img src="assets/img/icons/home.svg" alt="home" width="12" height="12">
+                </a>
+            </li>
+            <li class="filter-breadcrumb__item">
+                <a class="filter-breadcrumb__hotels">Гостиницы</a>
+            </li>
         </ul>
 
         <!-- Форма для фильтра гостиниц -->
@@ -99,12 +105,14 @@
             <!-- Стоимость -->
             <fieldset class="filter-form__item">
                 <legend>Стоимость, ₽:</legend>
-                <label>
-                    <input type="text" name="price" value="0"> от
-                </label>
-                <label>
-                    <input type="text" name="price" value="9000"> до
-                </label>
+                <div class="filter-form__price">
+                    <label>
+                        <input type="text" name="price" value="0"> от
+                    </label>
+                    <label>
+                        <input type="text" name="price" value="9000"> до
+                    </label>
+                </div>
                 <button class="range-toggle toggle-min" type="button">
                     <span>Изменить минимальную цену</span>
                 </button>
@@ -128,21 +136,23 @@
 
         <!-- Сортировка результата поиска -->
         <div class="sorter">
-            <p class="sorter-found">Найдено гостиниц: <span>38</span></p>
+            <p class="sorter-found">Найдено гостиниц:&nbsp;<span>38</span></p>
 
             <!-- Метод сортировки -->
-            <select class="sorter-filter" name="sorter-filter[]">
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="dearly">Сначала дорогие</option>
-                <option value="rating-down">Рейтинг (по убыванию)</option>
-                <option value="rating-up">Рейтинг (по возрастанию)</option>
-            </select>
+            <div class="sorter-filter-wrap">
+                <select class="sorter-filter" name="sorter-filter[]">
+                    <option value="cheap" selected>Сначала дешевые</option>
+                    <option value="dearly">Сначала дорогие</option>
+                    <option value="rating-down">Рейтинг (по убыванию)</option>
+                    <option value="rating-up">Рейтинг (по возрастанию)</option>
+                </select>
+            </div>
 
             <!-- Метод отображения -->
             <ul class="sorter-buttons">
-                <li><button class="sorter__mode-time"></button></li>
-                <li><button class="sorter__mode-slideshow"></button></li>
-                <li><button class="sorter__mode-list"></button></li>
+                <li><button class="sorter-mode sorter__mode-tile"></button></li>
+                <li><button class="sorter-mode sorter__mode-slideshow"></button></li>
+                <li class="active"><button class="sorter-mode sorter__mode-list"></button></li>
             </ul>
         </div> <!-- /Сортировка результата поиска -->
 
@@ -154,7 +164,7 @@
                 <img class="hotels-card__image" src="assets/img/content/hotel_1.jpg" alt="фото гостиницы" width="180" height="120">
                 <!-- Описание -->
                 <div class="hotels-card__info">
-                    <p class="hotels-card__name">Amara Resort & Spa</p><br>
+                    <p class="hotels-card__name">Amara Resort & Spa</p>
                     <p class="hotels-card__type">Гостиница</p>
                     <p class="hotels-card__cost">От 4000 ₽</p>
                     <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -180,7 +190,7 @@
                 <img class="hotels-card__image" src="assets/img/content/hotel_2.jpg" alt="фото гостиницы" width="180" height="120">
                 <!-- Описание -->
                 <div class="hotels-card__info">
-                    <p class="hotels-card__name">Desert Quail Inn</p><br>
+                    <p class="hotels-card__name">Desert Quail Inn</p>
                     <p class="hotels-card__type">Мотель</p>
                     <p class="hotels-card__cost">От 3000 ₽</p>
                     <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -206,7 +216,7 @@
                 <img class="hotels-card__image" src="assets/img/content/hotel_3.jpg" alt="фото гостиницы" width="180" height="120">
                 <!-- Описание -->
                 <div class="hotels-card__info">
-                    <p class="hotels-card__name">Villas at Poco Diablo</p><br>
+                    <p class="hotels-card__name">Villas at Poco Diablo</p>
                     <p class="hotels-card__type">Апартаменты</p>
                     <p class="hotels-card__cost">От 2000 ₽</p>
                     <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -232,7 +242,7 @@
                 <img class="hotels-card__image" src="assets/img/content/hotel_4.jpg" alt="фото гостиницы" width="180" height="120">
                 <!-- Описание -->
                 <div class="hotels-card__info">
-                    <p class="hotels-card__name">GreenTree Inn</p><br>
+                    <p class="hotels-card__name">GreenTree Inn</p>
                     <p class="hotels-card__type">Гостиница</p>
                     <p class="hotels-card__cost">От 3000 ₽</p>
                     <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -251,16 +261,20 @@
                     <p class="hotels-card__rating-desc">Рейтинг: <span>9,2</span></p>
                 </div>
             </li> <!-- /Карточка отеля -->
+
+
         </ol> <!-- /Список отелей -->
 
         <!-- Кнопка "Загрузить еще" -->
-        <button class="load-more blue-button" type="button" name="load-more">Загрузить еще</button>
+        <div class="load-more">
+            <button class="load-more-button blue-button" type="button" name="load-more">Загрузить еще</button>
+        </div>
 
         <!-- Список страниц -->
         <div class="pager">
             <ul class="pager-list">
                 <li class="pager-list-item">
-                    <a class="pager-list-item__link pager-current blue-button" href="">1</a>
+                    <a class="pager-list-item__link active" href="">1</a>
                 </li>
                 <li class="pager-list-item">
                     <a class="pager-list-item__link blue-button" href="">2</a>
@@ -281,13 +295,14 @@
 
             <div class="pager-select">
                 <p>Гостиниц на странице: </p>
-
-                <select class="pager-select-number" name="pager-select-number">
-                    <option value="4">4</option>
-                    <option value="8">8</option>
-                    <option value="16">16</option>
-                    <option value="32">32</option>
-                </select>
+                <div class="pager-select-number_wrap">
+                    <select class="pager-select-number" name="pager-select-number">
+                        <option value="4">4</option>
+                        <option value="8">8</option>
+                        <option value="16">16</option>
+                        <option value="32">32</option>
+                    </select>
+                </div>
             </div>
         </div> <!-- /Список страниц -->
     </section> <!-- /Результаты поиска -->
@@ -329,7 +344,7 @@
         </div>
 
         <!-- Номер телефона -->
-        <address>
+        <address class="footer-address">
             <span class="visually-hidden">Наш телефон</span> <!-- Скрытый заголовок -->
             <a class="footer-phone" href="https://api.whatsapp.com/send?phone=78128121212">+7 (812) 812-12-12</a>
         </address>
