@@ -12,7 +12,12 @@
     src: url('../fonts/ptsans-700.woff2') format("woff2");
     font-display: swap;
 }
-body, ol, ul, li, p, input { padding: 0; margin: 0; }
+html {
+    height: 100%;
+}
+body, ol, ul, li, p, input {
+    padding: 0; margin: 0;
+}
 ul, ol, li {
     list-style: none;
 }
@@ -34,6 +39,15 @@ body {
     font-weight: 400;
     width: 1200px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .visually-hidden {
     position: absolute;
@@ -60,7 +74,7 @@ body {
 
 
 
-.page-header {
+.page-header .page-container {
     width: 1200px;
     height: 65px;
     display: flex;
@@ -129,19 +143,14 @@ body {
     border-radius: 4px;
 }
 
-
+.main-container {
+    flex-grow: 1;
+}
 /* Секция Приветствия */
 .welcome {
     width: 1200px;
     height: 485px;
-    background:  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
-}
-.welcome-titles {
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    background: url("../img/welcome.svg") no-repeat center,  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
 }
 
 .section-title {
@@ -161,20 +170,30 @@ body {
 .advantages-list {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-auto-columns: repeat(auto-fit, minmax(399px, 1200px)); */
 }
 .advantages-list__wrap {
     width: 400px;
     height: 384px;
     background-color: #f0f6fa;
-    float: left;
     text-align: center;
 }
 .advantages-list__wrap:nth-child(4) {
     background-color: #e6f0f6;
 }
 .advantages-list__wrap-1 {
-    width: 1200px;
+    width: 100%;
+    /* max-width: 1200px; */
     height: 768px;
+}
+.advantages-list__wrap-1 ul {
+    display: grid;
+    grid-template-areas:
+    "a1 a2 a2"
+    "a3 a4 a5";
 }
 .advantages-list__wrap-2 {
     width: 1200px;
@@ -184,16 +203,30 @@ body {
     width: 400px;
     height: 384px;
     text-align: center;
-    float: left;
     background-color: #f0f6fa;
+}
+.advantages-item:nth-child(1) {
+    grid-area: a1;
+}
+.advantages-item:nth-child(2) {
+    grid-area: a2;
+}
+.advantages-item:nth-child(3) {
+    grid-area: a3;
 }
 .advantages-item:nth-child(4) {
     background-color: #fff;
+    grid-area: a4;
+}
+.advantages-item:nth-child(5) {
+    grid-area: a5;
+}
+.advantages-list__wrap-2 ul {
+    display: flex;
 }
 .advantages-list__wrap-1 .advantages-item-img {
     width: 800px;
     height: 384px;
-
     background: #a38d7b url('../img/content/photo_1.jpg') no-repeat;
 }
 .advantages-list__wrap-2 .advantages-item-img {
@@ -261,11 +294,20 @@ body {
     height: 411px;
     background: #54606c url("../img/background_blur_1.jpg") no-repeat;
 }
+.subscribe.hotels {
+    background: none;
+}
 .subscribe .section-title {
-    color: white;
+    color: #fff;
+}
+.subscribe.hotels .section-title {
+    color: #000;
 }
 .subscribe .section-description {
     color: white;
+}
+.subscribe.hotels .section-description {
+    color: #333;
 }
 .subscribe-form {
     width: 800px;
@@ -273,21 +315,19 @@ body {
     padding: 0;
 }
 .subscribe-form__email {
-    margin: 0; padding: 0;
     padding-left: 22px;
     height: 60px;
     width: 578px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: none;
-
+    vertical-align: middle;
 }
 .subscribe-form__email::placeholder {
     color: #000;
     font-size: 18px;
 }
 .subscribe-form__submit {
-    margin: 0; padding: 0;
     margin-left: -5px;
     width: 200px;
     height: 60px;
@@ -296,6 +336,7 @@ body {
     border: none;
     font-size: 20px;
     text-transform: uppercase;
+    vertical-align: middle;
 }
 
 
@@ -648,15 +689,15 @@ body {
 /*
 ------Footer------
 */
-.footer {
-    box-sizing: border-box;
-    width: 1200px;
-    height: 120px;
+
+.footer .page-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 120px;
     padding: 0 72px;
+    box-sizing: border-box;
 }
 .footer-social a {
     margin-right: 30px;
