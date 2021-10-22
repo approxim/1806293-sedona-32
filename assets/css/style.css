@@ -51,10 +51,13 @@ body {
 }
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .brown-button {
     background-color: #756157;
@@ -151,6 +154,7 @@ body {
     width: 1200px;
     height: 485px;
     background: url("../img/welcome.svg") no-repeat center,  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
+    margin-bottom: 63px;
 }
 
 .section-title {
@@ -159,13 +163,19 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 37px;
 }
 .section-description {
     font-size: 22px;
     line-height: 26px;
     text-align: center;
 }
-
+.advantages {
+    margin-bottom: 91px;
+}
+.advantages .section-description {
+    margin-bottom: 80px;
+}
 /* Основной список */
 .advantages-list {
     width: 100%;
@@ -191,6 +201,10 @@ body {
     grid-template-areas:
     "real-town photo-town photo-town"
     "lodging eat souvenirs";
+
+}
+.advantages-list__wrap-1 li {
+
 }
 .advantages-list__wrap-2 {
     width: 1200px;
@@ -201,6 +215,13 @@ body {
     height: 384px;
     text-align: center;
     background-color: #f0f6fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.advantages-item img {
+    margin-bottom: 25px;
 }
 .advantages-item:nth-child(1) {
     grid-area: real-town;
@@ -231,6 +252,12 @@ body {
     height: 384px;
     background: #7e6156 url('../img/content/photo_2.jpg') no-repeat;
 }
+.advantages-list__wrap-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .advantages-item-desc {
     background-color: #82b3d3;
 }
@@ -240,6 +267,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
+    margin-bottom: 25px;
 }
 .advantages-list__number {
     font-size: 18px;
@@ -247,6 +275,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: #333;
+    margin-bottom: 25px;
 }
 .advantages-list__desc {
     font-size: 18px;
@@ -272,12 +301,15 @@ body {
 .search-hotel {
     width: 1200px;
 }
+.search-hotel .section-description {
+    margin-bottom: 58px;
+}
 .search-hotel__button {
     width: 575px;
     height: 60px;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 91px;
     font-size: 20px;
     font-weight: 700;
     line-height: 36px;
@@ -296,12 +328,14 @@ body {
 }
 .subscribe .section-title {
     color: #fff;
+    padding-top: 94px;
 }
 .subscribe.hotels .section-title {
     color: #000;
 }
 .subscribe .section-description {
     color: white;
+    margin-bottom: 50px;
 }
 .subscribe.hotels .section-description {
     color: #333;
