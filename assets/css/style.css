@@ -76,7 +76,6 @@ body {
 }
 
 
-
 .page-header .page-container {
     width: 1200px;
     height: 65px;
@@ -153,7 +152,7 @@ body {
 .welcome {
     width: 1200px;
     height: 485px;
-    background: url("../img/welcome.svg") no-repeat center,  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
+    background: url("../img/welcome.svg") no-repeat center 51px,  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
     margin-bottom: 63px;
 }
 
@@ -201,9 +200,6 @@ body {
     grid-template-areas:
     "real-town photo-town photo-town"
     "lodging eat souvenirs";
-
-}
-.advantages-list__wrap-1 li {
 
 }
 .advantages-list__wrap-2 {
@@ -385,14 +381,13 @@ body {
     background: #556a76 url("../img/background_blur_2.jpg") no-repeat;
     background-size: 100% auto;
     color: white;
-
 }
 .filter-title {
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
     color: white;
-    padding: 54px 72px 0;
+    padding: 35px 72px 0;
 }
 .filter-breadcrumb {
     display: flex;
@@ -403,7 +398,6 @@ body {
 .filter-breadcrumb__item {
     margin-right: 26px;
 }
-
 .filter-breadcrumb__item::after {
     content: url("../img/arrow_right.svg");
     position: relative;
@@ -423,6 +417,9 @@ body {
 .filter-form__item {
     display: flex;
     flex-direction: column;
+}
+.filter-form__item:first-child {
+    margin-right: 67px;
 }
 .filter-form__item:last-child {
     align-self: flex-end;
@@ -444,7 +441,6 @@ body {
     display: inline-block;
     margin-right: 19px;
     transform: scale(1.4);
-
 }
 .filter-form__price {
     display: flex;
@@ -753,9 +749,6 @@ body {
     padding: 0 72px;
     box-sizing: border-box;
 }
-.footer-social a {
-    margin-right: 30px;
-}
 .footer-address {
     position: absolute;
     width: 700px;
@@ -768,4 +761,7 @@ body {
     font-style: normal;
     text-decoration: none;
     color: #000;
+}
+.footer-logo {
+    padding: 38px 0;
 }
