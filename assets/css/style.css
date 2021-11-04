@@ -249,27 +249,33 @@ body {
     flex-wrap: wrap;
 }
 .advantages-list__wrap {
-    width: 400px;
-    height: 384px;
+    width: 100%;
     background-color: #f0f6fa;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .advantages-list__wrap:nth-child(4) {
     background-color: #e6f0f6;
 }
-.advantages-list__wrap-1 {
-    width: 100%;
-    height: 768px;
+.advantages-list__wrap-1::after {
+    content: "";
+    display: block;
+    width: 800px;
+    height: 384px;
+    background: #a38d7b url('../img/content/photo_1.jpg') no-repeat;
+    order: 2;
 }
 .advantages-list__wrap-1 ul {
-    display: grid;
-    grid-template-areas:
-    "real-town photo-town photo-town"
-    "lodging eat souvenirs";
+    order: 3;
+    display: flex;
 }
-.advantages-list__wrap-2 {
-    width: 1200px;
+.advantages-list__wrap-2:before {
+    content: "";
+    display: block;
+    width: 800px;
     height: 384px;
+    background: #7e6156 url('../img/content/photo_2.jpg') no-repeat;
 }
 .advantages-item {
     width: 400px;
@@ -281,39 +287,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-.advantages-item img {
-    margin-bottom: 25px;
-}
-.advantages-item:nth-child(1) {
-    grid-area: real-town;
-}
-.advantages-item:nth-child(2) {
-    grid-area: photo-town;
-}
-.advantages-item:nth-child(3) {
-    grid-area: lodging;
-}
-.advantages-item:nth-child(4) {
+.advantages-list__wrap-1 li:nth-child(2) {
     background-color: #fff;
-    grid-area: eat;
-}
-.advantages-item:nth-child(5) {
-    grid-area: souvenirs;
 }
 .advantages-list__wrap-2 ul {
     display: flex;
 }
-.advantages-list__wrap-1 .advantages-item-img {
-    width: 800px;
-    height: 384px;
-    background: #a38d7b url('../img/content/photo_1.jpg') no-repeat;
-}
-.advantages-list__wrap-2 .advantages-item-img {
-    width: 800px;
-    height: 384px;
-    background: #7e6156 url('../img/content/photo_2.jpg') no-repeat;
-}
 .advantages-list__wrap-3 {
+    width: 400px;
+    height: 384px;
     display: flex;
     flex-direction: column;
     justify-content: center;
