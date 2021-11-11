@@ -155,15 +155,14 @@ body {
     bottom: -12px;
 }
 .navigation-user {
-    margin-right: 72px;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 72px 10px 0;
 }
 .navigation-user .navigation-link {
     padding-bottom: 5px;
 }
-.navigation-user li {
+.navigation-user > li {
     margin-left: 5px;
 }
 .navigation-user
@@ -221,7 +220,6 @@ body {
     background: url("../img/welcome.svg") no-repeat center 51px,  url("../img/divider.svg") no-repeat left bottom, #778693 url("../img/index_background.jpg") no-repeat 100%;
     margin-bottom: 61px;
 }
-
 .section-title {
     font-size: 30px;
     line-height: 36px;
@@ -358,10 +356,6 @@ body {
     line-height: 36px;
     text-transform: uppercase;
 }
-.search-hotel__button:hover {
-
-}
-
 
 /* Подписка на рассылку */
 .subscribe {
@@ -392,7 +386,6 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
-
 }
 .subscribe-form__email {
     padding: 0 22px;
@@ -446,7 +439,6 @@ body {
 .subscribe-form__submit:active {
     background-color: #68a2ca;
     color: #95beda;
-
 }
 
 /*---------------------
@@ -764,7 +756,6 @@ body {
 .sorter-buttons li.active {
     border-color: #000;
 }
-
 .sorter__mode-tile::before {
     content: url('../img/icons/mode_tile.svg');
 }
@@ -774,7 +765,6 @@ body {
 .sorter__mode-list::before {
     content: url('../img/icons/mode_list.svg');
 }
-
 .hotels-card {
     display: flex;
     align-content: center;
@@ -796,15 +786,16 @@ body {
     align-content: start;
     column-gap: 8px;
     height: 120px;
-    margin-left: 36px;
+    margin-left: 39px;
 }
 .hotels-card__name {
     grid-area: name;
     display: block;
     font-weight: 700;
     font-size: 24px;
-    line-height: 31px;
+    line-height: 26px;
     height: auto;
+    margin-bottom: 3px;
 }
 .hotels-card__type {
     grid-area: type;
@@ -826,7 +817,7 @@ body {
     text-transform: uppercase;
     padding: 10px 30px;
     border-radius: 4px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .hotels-card__favorite {
     grid-area: favor;
@@ -836,7 +827,7 @@ body {
     text-transform: uppercase;
     padding: 10px 30px;
     border-radius: 4px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .hotels-card__rating {
     margin-left: auto;
@@ -1057,4 +1048,89 @@ body {
 .footer-logo:active {
     fill: #d6d0cd;
     border: 3px solid transparent;
+}
+
+
+.popover {
+    display: none;
+}
+.popover.active {
+    display: flex;
+    flex-flow: column;
+    padding-top: 25px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: 400px;
+    min-height: 90px;
+    border-radius: 20px;
+    position: absolute;
+    top: 60px;
+    right: 68px;
+    z-index: 20;
+    border: 1px solid #e5e5e5;
+}
+.popover::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translate(50%, 0) rotate(45deg);
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    z-index: 19;
+}
+.popover::after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    z-index: 20;
+    transform: translate(50%, 0);
+    background-color: #fff;
+}
+.popover-favorites-item {
+    flex-grow: 1;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* display: grid;
+    grid-template-areas:
+    "popover-img popover-title trash"
+    "popover-img popover-type trash";
+    grid-template-columns: 65px 269px 16px; */
+    margin: 0 25px 25px;
+}
+.popover-favorites-item::after {
+    content: url("../img/icons/delete_1.svg");
+    height: 16px;
+    width: auto;
+    grid-area: trash;
+    align-self: center;
+}
+.popover-favorites-image {
+    border-radius: 50%;
+    grid-area: popover-img;
+    width: 48px; height: 48px;
+    margin-right: 17px;
+}
+.popover-title {
+    grid-area: popover-title;
+    justify-self: start;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.popover-type {
+    grid-area: popover-type;
+}
+.popover button {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 60px;
+    text-transform: uppercase;
+    margin-top: auto;
 }
