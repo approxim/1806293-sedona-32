@@ -212,5 +212,45 @@
             </a>
         </div> <!-- /page-container -->
     </footer> <!-- /Подвал сайта -->
+
+    <!-- Модальное окно -->
+    <div class="overlay active">
+        <div class="modal modal-search">
+            <h3 class="modal-title">Поиск гостиницы в Седоне</h3>
+            <form class="modal-search-form" action="https://echo.htmlacademy.ru/" name="modal-search-form" method="post">
+                <p class="modal-wrap modal-wrap-from">
+                    <label class="modal-label" for="modal-input-from">Дата заезда:</label>
+                    <input class="modal-input modal-input-from" id="modal-input-from" type="text" placeholder="Укажите дату" value="27 апреля 2020" name="input-from" required>
+                    <span class="modal-calendar"></span>
+                    <span class="modal-helpbox error">Мы не можем отправить вас в прошлое.</span>
+                </p>
+                <p class="modal-wrap modal-wrap-to">
+                    <label class="modal-label" for="modal-input-to">Дата выезда:</label>
+                    <input class="modal-input modal-input-to" id="modal-input-to" type="text" placeholder="Укажите дату" value="29 апреля 2020" name="input-to" required>
+                    <span class="modal-calendar"></span>
+                    <span class="modal-helpbox">На эти даты есть свободные номера. Пока есть.</span>
+                </p>
+                <p class="modal-wrap modal-adult-count">
+                    <label class="modal-label" for="modal-input-adult">Взрослые:</label>
+                    <input class="modal-input-adult" id="modal-input-adult" type="number" value="2" name="input-adult" required>
+                </p>
+                <p class="modal-wrap modal-child-count">
+                    <label class="modal-label" for="modal-input-child">Дети:</label>
+                    <button>
+                        <span class="visually-hidden">Дополнительная информация</span>
+                        <span></span>
+                    </button>
+                    <input class="modal-input-child" id="modal-input-child" type="number" value="1" name="input-child">
+                    <button></button>
+                    <button></button>
+                </p>
+
+                <button class="modal-button blue-button">Найти</button>
+            </form>
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть модальное окно</span>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
