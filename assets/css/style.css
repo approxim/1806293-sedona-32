@@ -406,26 +406,20 @@ body {
 }
 .subscribe-form__email {
     padding: 0 22px;
-    height: 55px;
+    height: 61px;
     width: 578px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #f2f2f2;
     font-size: 18px;
-    border: 3px solid transparent;
     outline: none;
 }
 .subscribe-form__email:hover {
     background-color: #e6e6e6;
 }
 .subscribe-form__email:focus {
-    border: 3px solid #83b3d3;
-    outline: none;
+    outline: 3px solid #83b3d3;
 }
-/* .subscribe-form__email:focus-within {
-    background-color: #fff;
-    border: 3px solid transparent;
-} */
 .subscribe-form__email.error {
     background-color: #fff;
     border: 2px solid #ff5757;
@@ -434,29 +428,22 @@ body {
     color: #000;
     font-size: 18px;
 }
+.subscribe-form__email:not(:placeholder-shown) {
+    outline: 2px solid black;
+    background: #fff;
+    color: black;
+}
 .subscribe-form__submit {
     width: 200px;
     height: 61px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 3px solid transparent;
     font-size: 20px;
     text-transform: uppercase;
-    vertical-align: middle;
     outline: none;
     cursor: pointer;
 }
-.subscribe-form__submit:hover {
-    background-color: #68a2ca;
-}
-.subscribe-form__submit:focus {
-    background-color: #68a2ca;
-    border: 3px solid #756257;
-}
-.subscribe-form__submit:active {
-    background-color: #68a2ca;
-    color: #95beda;
-}
+
 
 /*---------------------
     Страница HOTELS
@@ -596,7 +583,7 @@ body {
     outline-offset: -5px;
     border: 3px solid #fff;
 }
-.filter-form__price input:active {
+.filter-form__price input:not(:placeholder-shown) {
     background-color: #756257;
     outline: none;
 }
@@ -1264,18 +1251,24 @@ body {
 .modal-wrap {
     width: 100%;
     display: grid;
-    grid-template-columns: 155px auto auto;
+    grid-template-columns: 155px 1fr;
+    grid-template-rows: 50px;
     margin-bottom: 10px;
 }
 .modal-adult-count,
 .modal-child-count {
     width: 50%;
-
+}
+.modal-adult-count input,
+.modal-child-count input {
+    width: 133px;
 }
 .modal-label {
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 }
 .modal-input {
     height: 50px;
@@ -1302,7 +1295,23 @@ body {
 .modal-input::placeholder {
     opacity: 0.6;
 }
-
+.modal-input-adult,
+.modal-input-child {
+    text-align: center;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.modal-child-count .modal-label {
+    justify-self: center;
+}
 .modal-calendar {
     display: block;
     cursor: pointer;
@@ -1333,4 +1342,110 @@ body {
     font-size: 20px;
     line-height: 40px;
     text-transform: uppercase;
+}
+.modal-icon {
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    align-self: center;
+    padding: 10px;
+    position: relative;
+}
+.modal-icon:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+.modal-icon:active {
+    outline: none;
+    border-radius: 4px;
+}
+.modal-icon-minus {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-left: 20px;
+}
+.modal-icon-plus {
+    grid-column: -1 / -2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    position: relative;
+    margin-right: 20px;
+}
+.modal-icon::before, .modal-icon::after {
+    content: "";
+    position: absolute;
+    background-color: #b3b3b3;
+}
+.modal-icon:hover::before, .modal-icon:hover::after {
+    background-color: #000;
+}
+.modal-icon:active::before, .modal-icon:active::after {
+    background-color: #ccc;
+}
+.modal-icon-minus::before {
+    width: 13px;
+    height: 1px;
+    right: 4px;
+}
+.modal-icon-plus::before {
+    width: 13px;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.modal-icon-plus::after {
+    width: 1px;
+    height: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.modal-tooltip {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #83b3d3;
+    color: white;
+    margin: 0 20px 4px 0;
+    outline: none;
+    grid-column: 2 / 1;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: end;
+    position: relative;
+}
+.modal-tooltip:hover {
+    background-color: #68a2ca;
+}
+.modal-tooltip-text {
+    display: none;
+    width: 256px;
+    height: 143px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    padding: 0 22px;
+    box-sizing: border-box;
+    cursor: initial;
+}
+.modal-tooltip-text:after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: #333;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.modal-tooltip-text.active {
+    display: flex;
 }
