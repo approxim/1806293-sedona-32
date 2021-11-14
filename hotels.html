@@ -28,7 +28,7 @@
             </nav>
 
             <!-- Лого -->
-            <a class="header-logo">
+            <a class="header-logo" href="/">
                 <img class="sedona-logo" src="assets/img/logo/logo_sedona.svg" alt="Логотип сайта" width="138" height="70">
             </a>
 
@@ -157,9 +157,9 @@
 
                     <!-- Метод отображения -->
                     <ul class="sorter-buttons">
-                        <li><button class="sorter-mode sorter__mode-tile"></button></li>
-                        <li><button class="sorter-mode sorter__mode-slideshow"></button></li>
-                        <li class="active"><button class="sorter-mode sorter__mode-list"></button></li>
+                        <li><button class="sorter-mode sorter__mode-tile" type="button"></button></li>
+                        <li><button class="sorter-mode sorter__mode-slideshow" type="button"></button></li>
+                        <li class="active"><button class="sorter-mode sorter__mode-list" type="button"></button></li>
                     </ul>
                 </div> <!-- /Сортировка результата поиска -->
 
@@ -168,10 +168,15 @@
                     <!-- Карточка отеля -->
                     <li class="hotels-card">
                         <!-- Картинка -->
-                        <img class="hotels-card__image" src="assets/img/content/hotel_1.jpg" alt="фото гостиницы" width="180" height="120">
+                        <a href="#">
+                            <img class="hotels-card__image" src="assets/img/content/hotel_1.jpg" alt="фото гостиницы" width="180" height="120">
+                        </a>
+
                         <!-- Описание -->
                         <div class="hotels-card__info">
-                            <p class="hotels-card__name">Amara Resort & Spa</p>
+                            <a class="hotels-card__name" href="#">Amara Resort & Spa
+                                <span class="visually-hidden">Название отеля</span>
+                            </a>
                             <p class="hotels-card__type">Гостиница</p>
                             <p class="hotels-card__cost">От 4000 ₽</p>
                             <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -194,10 +199,14 @@
                     <!-- Карточка отеля -->
                     <li class="hotels-card">
                         <!-- Картинка -->
-                        <img class="hotels-card__image" src="assets/img/content/hotel_2.jpg" alt="фото гостиницы" width="180" height="120">
+                        <a href="#">
+                            <img class="hotels-card__image" src="assets/img/content/hotel_2.jpg" alt="фото гостиницы" width="180" height="120">
+                        </a>
                         <!-- Описание -->
                         <div class="hotels-card__info">
-                            <p class="hotels-card__name">Desert Quail Inn</p>
+                            <a class="hotels-card__name" href="#">Desert Quail Inn
+                                <span class="visually-hidden">Название отеля</span>
+                            </a>
                             <p class="hotels-card__type">Мотель</p>
                             <p class="hotels-card__cost">От 3000 ₽</p>
                             <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -220,10 +229,14 @@
                     <!-- Карточка отеля -->
                     <li class="hotels-card">
                         <!-- Картинка -->
-                        <img class="hotels-card__image" src="assets/img/content/hotel_3.jpg" alt="фото гостиницы" width="180" height="120">
+                        <a href="#">
+                            <img class="hotels-card__image" src="assets/img/content/hotel_3.jpg" alt="фото гостиницы" width="180" height="120">
+                        </a>
                         <!-- Описание -->
                         <div class="hotels-card__info">
-                            <p class="hotels-card__name">Villas at Poco Diablo</p>
+                            <a class="hotels-card__name" href="#">Villas at Poco Diablo
+                                <span class="visually-hidden">Название отеля</span>
+                            </a>
                             <p class="hotels-card__type">Апартаменты</p>
                             <p class="hotels-card__cost">От 2000 ₽</p>
                             <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -246,10 +259,14 @@
                     <!-- Карточка отеля -->
                     <li class="hotels-card">
                         <!-- Картинка -->
-                        <img class="hotels-card__image" src="assets/img/content/hotel_4.jpg" alt="фото гостиницы" width="180" height="120">
+                        <a href="#">
+                            <img class="hotels-card__image" src="assets/img/content/hotel_4.jpg" alt="фото гостиницы" width="180" height="120">
+                        </a>
                         <!-- Описание -->
                         <div class="hotels-card__info">
-                            <p class="hotels-card__name">GreenTree Inn</p>
+                            <a class="hotels-card__name" href="#">GreenTree Inn
+                                <span class="visually-hidden">Название отеля</span>
+                            </a>
                             <p class="hotels-card__type">Гостиница</p>
                             <p class="hotels-card__cost">От 3000 ₽</p>
                             <a class="hotels-card__moreinfo brown-button" href="">Подробнее</a>
@@ -268,7 +285,6 @@
                             <p class="hotels-card__rating-desc">Рейтинг: <span>9,2</span></p>
                         </div>
                     </li> <!-- /Карточка отеля -->
-
 
                 </ol> <!-- /Список отелей -->
 
@@ -303,7 +319,7 @@
                     <div class="pager-select">
                         <p>Гостиниц на странице: </p>
                         <div class="pager-select-number_wrap">
-                            <select class="pager-select-number" name="pager-select-number">
+                            <select class="pager-select-number" name="pager-select-number[]">
                                 <option value="4">4</option>
                                 <option value="8">8</option>
                                 <option value="16">16</option>
