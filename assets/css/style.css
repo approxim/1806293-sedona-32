@@ -255,7 +255,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 37px;
+    margin-bottom: 35px;
 }
 .section-description {
     font-size: 22px;
@@ -337,7 +337,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
-    margin: 12px 0 30px;
+    margin: 20px 0;
 }
 .advantages-list__number {
     font-size: 18px;
@@ -385,7 +385,9 @@ body {
     line-height: 36px;
     text-transform: uppercase;
 }
-
+.search-hotel .section-title {
+    margin-bottom: 33px;
+}
 /* Подписка на рассылку */
 .subscribe {
     width: 1200px;
@@ -397,14 +399,16 @@ body {
 }
 .subscribe .section-title {
     color: #fff;
-    padding-top: 94px;
+    padding-top: 92px;
 }
 .subscribe.hotels .section-title {
     color: #000;
+    padding-top: 55px;
+    margin-bottom: 30px;
 }
 .subscribe .section-description {
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
 }
 .subscribe.hotels .section-description {
     color: #333;
@@ -479,7 +483,7 @@ body {
 }
 .filter-breadcrumb {
     display: flex;
-    padding-left: 72px;
+    padding-left: 62px;
     height: 20px;
     margin: -4px 0 46px;
 }
@@ -515,12 +519,10 @@ body {
     fill: #9bb9d1;
     border: 3px solid transparent;
 }
-
-
 .filter-breadcrumb__hotels {
     color: #fff;
     border: 3px solid transparent;
-    padding: 2px 7px;
+    padding: 2px 7px 2px 0;
     outline: none;
 }
 .filter-breadcrumb__hotels:hover {
@@ -546,9 +548,8 @@ body {
 }
 .filter-form__item:last-of-type {
     align-self: flex-end;
-    margin-bottom: 14px;
 }
-.filter-form__item:nth-of-type(3) legend {
+.field-cost legend {
     margin-bottom: 34px;
 }
 .filter-form__item legend {
@@ -558,20 +559,73 @@ body {
     margin: 0 0 30px -5px;
 }
 .filter-form__item label {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+}
+.filter-label {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    margin-bottom: 12px;
+    position: absolute;
+    left: 37px;
 }
-.filter-form__item input[type="checkbox"],
-.filter-form__item input[type="radio"] {
-    display: inline-block;
-    margin-right: 19px;
-    transform: scale(1.55);
+.field-infrastructure label,
+.field-type label {
+    margin-bottom: 35px;
 }
-/* .filter-form__item input:checked {
-    background-color: black;
-} */
+/* Чекбоксы и радиокнопки */
+.filter-mark {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    left: -2px;
+}
+.filter-mark:hover {
+    background: #c4d1e1;
+}
+.field-input:focus + .filter-mark {
+    outline: 3px solid #83B3D3;
+    background: #c4d1e1;
+}
+.field-input:active + .filter-mark {
+    background-color: #8297a7;
+    outline: none;
+}
+
+/* Чекбоксы */
+.filter-mark-checkbox {
+    border-radius: 4px;
+}
+.field-input[type="checkbox"]:checked + .filter-mark:before {
+    content: url("../img/icons/tick.svg");
+    fill: #3f5e72;
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Радиокнопки */
+
+.filter-mark-radio {
+    border-radius: 50%;
+}
+.field-input[type="radio"]:checked + .filter-mark:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #3f5e72;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Стоимость */
 .filter-form__price {
     display: flex;
 }
@@ -583,7 +637,7 @@ body {
     color: white;
     font-size: 18px;
     line-height: 23px;
-    margin-right: -18px;
+    margin-right: -38px;
     padding: 0 45px 0 16px;
     box-sizing: border-box;
 }
@@ -912,7 +966,7 @@ body {
 }
 .load-more-button {
     width: 625px;
-    padding: 20px 240px;
+    padding: 15px 240px;
     border-radius: 4px;
     font-size: 20px;
     line-height: 26px;
@@ -923,7 +977,6 @@ body {
     white-space: nowrap;
     margin: 0 auto;
 }
-
 .pager {
     width: 1056px;
     margin: 31px auto;
@@ -983,7 +1036,7 @@ body {
     background-color: #fff;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
-    padding: 0 17px;
+    padding: 0 15px;
     appearance: none;
     font-weight: 400;
     font-size: 18px;
@@ -1004,7 +1057,6 @@ body {
 .pager-select-number option {
     background-color: #fff;
 }
-
 
 /*
 ------Footer------
