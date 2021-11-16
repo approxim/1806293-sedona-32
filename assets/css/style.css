@@ -1252,7 +1252,8 @@ body {
 .popover-favorites-image {
     border-radius: 50%;
     grid-area: popover-img;
-    width: 48px; height: 48px;
+    width: 48px;
+    height: 48px;
     margin-right: 17px;
 }
 .popover-title {
