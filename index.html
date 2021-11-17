@@ -37,11 +37,13 @@
             <ul class="navigation-user">
                 <li class="navigation-item">
                     <a class="navigation-link search" href="#">
+                        <span class="visually-hidden">Поиск по сайту</span>
                         <svg aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m18 16.5-3.7-3.7A8 8 0 0 0 8-.1C3.6-.1 0 3.6 0 8a8 8 0 0 0 12.9 6.3l3.7 3.7 1.4-1.5ZM8 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6Z"/></svg>
                     </a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link like" href="#">
+                        <span class="visually-hidden">Избранные гостиницы</span>
                         <svg aria-hidden="true" focusable="false" width="18" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5L9 14.4l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
                         <span class="like-number">12</span>
                     </a>
@@ -49,8 +51,10 @@
                         <ul class="popover-favorites-list">
                             <li class="popover-favorites-item">
                                 <a class="popover-link" href="#">
-                                    <img class="popover-favorites-image" src="/assets/img/content/hotel-2-small.jpg" alt="hotel Desert Quail Inn" width="48" height="48">
-                                    <span class="popover-title">Desert Quail Inn</span>
+                                    <img class="popover-favorites-image" src="/assets/img/content/hotel-2-small.jpg" alt="фото отеля" width="48" height="48">
+                                    <span class="popover-title" lang="en">
+                                        <span class="visually-hidden">Название отеля</span>
+                                        Desert Quail Inn</span>
                                     <span class="popover-type">Мотель</span>
                                 </a>
                                 <button class="popover-trash" type="button">
@@ -59,8 +63,10 @@
                             </li>
                             <li class="popover-favorites-item">
                                 <a class="popover-link" href="#">
-                                    <img class="popover-favorites-image" src="/assets/img/content/hotel-3-small.jpg" alt="hotel Desert Quail Inn" width="48" height="48">
-                                    <span class="popover-title">Villas at Poco Diablo</span>
+                                    <img class="popover-favorites-image" src="/assets/img/content/hotel-3-small.jpg" alt="фото отеля" width="48" height="48">
+                                    <span class="popover-title" lang="en">
+                                        <span class="visually-hidden">Название отеля</span>
+                                        Villas at Poco Diablo</span>
                                     <span class="popover-type">Апартаменты</span>
                                 </a>
                                 <button class="popover-trash" type="button">
@@ -72,7 +78,9 @@
                     </div>
                 </li>
                 <li class="navigation-item">
-                    <button class="navigation-button brown-button" type="button">Хочу сюда!</button>
+                    <button class="navigation-button brown-button" type="button">
+                        <span class="visually-hidden">Подобрать гостиницу</span>Хочу сюда!
+                    </button>
                 </li>
             </ul>
         </div> <!-- /page-container -->
@@ -175,7 +183,7 @@
                 <!-- Форма подписки -->
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru/" name="subscribe-form" method="post">
                     <input class="subscribe-form__email" type="email" name="user-email" placeholder="Ваш e-mail" required>
-                    <input class="subscribe-form__submit blue-button" type="submit" name="submit" value="Подписаться">
+                    <button class="subscribe-form__submit blue-button" type="submit">Подписаться</button>
                 </form>
             </section> <!-- /Подписка на рассылку -->
         </div> <!-- /page-container -->
@@ -205,8 +213,10 @@
 
             <!-- Номер телефона -->
             <address class="footer-address">
-                <span class="visually-hidden">Наш телефон</span> <!-- Скрытый заголовок -->
-                <a class="footer-phone" href="https://api.whatsapp.com/send?phone=78128121212">+7 (812) 812-12-12</a>
+                <a class="footer-phone" href="https://api.whatsapp.com/send?phone=78128121212">
+                    <span class="visually-hidden">Наш телефон</span> <!-- Скрытый заголовок -->
+                    +7 (812) 812-12-12
+                </a>
             </address>
 
             <!-- Лого HTML-academy -->
@@ -219,7 +229,7 @@
     </footer> <!-- /Подвал сайта -->
 
     <!-- Модальное окно -->
-    <div class="overlay active">
+    <div class="overlay ">
         <div class="modal modal-search">
             <h3 class="modal-title">Поиск гостиницы в Седоне</h3>
             <form class="modal-search-form" action="https://echo.htmlacademy.ru/" name="modal-search-form" method="post">
@@ -242,8 +252,8 @@
                 <p class="modal-wrap modal-adult-count">
                     <label class="modal-label" for="modal-input-adult">Взрослые:</label>
                     <input class="modal-input-adult" id="modal-input-adult" type="number" value="2" name="input-adult" required>
-                    <button class="modal-icon modal-icon-minus" type="button"></button>
-                    <button class="modal-icon modal-icon-plus" type="button"></button>
+                    <button class="modal-icon modal-icon-minus" type="button" title="уменьшить на одного"></button>
+                    <button class="modal-icon modal-icon-plus" type="button" title="увеличить    на одного"></button>
                 </p>
                 <p class="modal-wrap modal-child-count">
                     <label class="modal-label" for="modal-input-child">Дети:</label>
@@ -252,11 +262,10 @@
                         <span class="modal-tooltip-text active">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     </button>
                     <input class="modal-input-child" id="modal-input-child" type="number" value="1" name="input-child">
-                    <button class="modal-icon modal-icon-minus" type="button"></button>
-                    <button class="modal-icon modal-icon-plus" type="button"></button>
+                    <button class="modal-icon modal-icon-minus" type="button" title="уменьшить на одного"></button>
+                    <button class="modal-icon modal-icon-plus" type="button" title="увеличить    на одного"></button>
                 </p>
-
-                <button class="modal-button blue-button">Найти</button>
+                <button class="modal-button blue-button" type="submit">Найти</button>
             </form>
             <button class="modal-close" type="button">
                 <span class="visually-hidden">Закрыть модальное окно</span>
