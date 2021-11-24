@@ -1566,6 +1566,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background: rgba(242, 242, 242, 0.8);
 }
 
 .overlay.active {
@@ -1577,7 +1578,6 @@ body {
     z-index: 1000;
     background-color: #fff;
     width: 715px;
-    height: 561px;
     border-radius: 30px;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
@@ -1654,6 +1654,7 @@ body {
     order: 3;
     display: flex;
     flex-flow: wrap;
+    margin-top: 35px;
 }
 
 .modal-wrap {
@@ -1662,6 +1663,7 @@ body {
     grid-template-columns: 155px 1fr;
     grid-template-rows: 50px;
     margin-bottom: 10px;
+    margin-top: 9px;
 }
 
 .modal-adult-count,
@@ -1696,7 +1698,6 @@ body {
     border: none;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-
 }
 
 .modal-input:hover {
@@ -1780,6 +1781,7 @@ body {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .modal-icon {
